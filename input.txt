@@ -1,0 +1,18 @@
+//get token "-" instead of declaration or assignment
+//-9 = 0;
+
+//EOF
+//a = 7
+
+// a = 18
+//int a = 9;
+//a = -----------------a * -------------2;
+
+// b = 2
+//b = ----------------------------------2;
+
+// t1 was not declarated or
+//t = t1 * t2;
+
+int a = 9; //+ 1;
+go = a * a;
