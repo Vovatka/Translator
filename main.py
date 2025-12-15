@@ -1,3 +1,23 @@
+"""
+Grammar:
+    Program ::= StatementList
+    StatementList ::= Statement | StatementList Statement
+    Statement ::= Declaration | Assignment
+    Declaration ::= "int" ID "=" Expression ";"
+    Assignment ::= ID "=" Expression ";"
+    Expression ::= Term | Expression "+" Term | Expression "-" Term
+    Term ::= Factor | Term "*" Factor | Term "/" Factor
+    Factor ::= INTEGER | ID | "(" Expression ")" | "-" Factor
+
+Features:
+    Variable declarations: int x = 10;
+    Implicit variable declarations: x = 10;
+    Arithmetic operations: +, -, *, /
+    Parentheses for precedence control
+    Unary minus operator
+    Integer arithmetic only
+"""
+
 import sys
 import os
 import traceback

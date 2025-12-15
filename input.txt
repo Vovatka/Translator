@@ -1,18 +1,31 @@
-//get token "-" instead of declaration or assignment
-//-9 = 0;
+int x = 10;
+int y = 20;
+z = x + y;
 
-//EOF
-//a = 7
+int a = 5;
+int b = 3;
+result = a * b + 2;
+value = a * (b + 2);
 
-// a = 18
-//int a = 9;
-//a = -----------------a * -------------2;
+int base = 100;
+int bonus = 25;
+int penalty = 10;
+total = base + bonus - penalty;
+result = total / 5 * 2;
 
-// b = 2
-//b = ----------------------------------2;
+int start = 0;
+start = start + 1;
+start = start * 10;
+start = start - 5;
+result = start / 2;
 
-// t1 was not declarated or
-//t = t1 * t2;
+int val = 10;
+neg = -val;
+complex = (val + 5) * -2;
 
-int a = 9; //+ 1;
-go = a * a;
+a = 10;
+b = 20;
+sum = a + b;
+
+int hugeMinus = ---9;
+hugeMinus = -hugeMinus;
