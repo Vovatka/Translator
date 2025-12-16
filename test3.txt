@@ -1,0 +1,3 @@
+int pos = 100;
+int neg = -pos;
+result = -(-50 + 25);

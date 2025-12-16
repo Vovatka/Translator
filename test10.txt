@@ -1,0 +1,2 @@
+big_num = 999999;
+result = big_num * 2 + 1000 / 5;

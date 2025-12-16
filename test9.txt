@@ -1,0 +1,4 @@
+int priority1 = 2 + 3 * 4;
+int priority2 = (2 + 3) * 4;
+int priority3 = 10 - 4 / 2;
+

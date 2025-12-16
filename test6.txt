@@ -1,0 +1,1 @@
+int div_zero = 10 / 0;
