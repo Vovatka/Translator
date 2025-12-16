@@ -285,7 +285,7 @@ int ID = IntLiteral ; ID = ID * IntLiteral + IntLiteral ;
 | I10 |goto(7, =)                              |{Assignment -> ID =. Expression ;}                                                                             |
 | I11 |goto(9, =)                              |{Declaration -> int ID =. Expression ;}                                                                        |
 | I12 |goto(10, Expression)                    |{Assignment -> ID = Expression.;<br>Expression -> Expression. + Term;<br>Expression -> Expression. - Term}     |
-| I13 |goto(10/11/17/21/22, Term)              |{Expression -> Term.;<br>Term -> Term. * Factor;<br>Term -> Term. / Factor}                                    |
+| I13 |goto(10/11/17, Term)                    |{Expression -> Term.;<br>Term -> Term. * Factor;<br>Term -> Term. / Factor}                                    |
 | I14 |goto(10/11/17/21/22, Factor)            |{Term -> Factor.}                                                                                              |
 | I15 |goto(10/11/17/21/22/23/24, IntLiteral)  |{Factor -> IntLiteral.}                                                                                        |
 | I16 |goto(10/11/17/21/22/23/24, ID)          |{Factor -> ID.}                                                                                                |
