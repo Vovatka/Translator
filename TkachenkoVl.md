@@ -133,26 +133,20 @@ b = a * 2 + 5;
 <StatementList><Statement> ->
 <Statement><Statement> ->
 <Declaration><Statement> ->
-int ID ("a") = <Expression> ; <Statement> ->
-int a = <Expression> ; <Statement> ->
-int a = <Term> ; <Statement> ->
-int a = <Factor> ; <Statement> ->
-int a = IntLiteral ; <Statement> ->
-int a = 10 ; <Statement> ->
-int a = 10 ; <Assignment> ->
-int a = 10 ; ID ("b") = <Expression> ; ->
-int a = 10 ; b = <Expression> ; ->
-int a = 10 ; b = <Expression> + <Term> ; ->
-int a = 10 ; b = <Term> + <Term> ; ->
-int a = 10 ; b = <Term> * <Factor> + <Term> ; ->
-int a = 10 ; b = <Factor> * <Factor> + <Term> ; ->
-int a = 10 ; b = ID ("a") * <Factor> + <Term> ; ->
-int a = 10 ; b = a * <Factor> + <Tearm> ; ->
-int a = 10 ; b = a * IntLiteral + <Term> ; ->
-int a = 10 ; b = a * 2 + <Term> ; ->
-int a = 10 ; b = a * 2 + <Factor> ; ->
-int a = 10 ; b = a * 2 + IntLiteral ; ->
-int a = 10 ; b = a * 2 + 5 ;
+int ID = <Expression> ; <Statement> ->
+int ID = <Term> ; <Statement> ->
+int ID = <Factor> ; <Statement> ->
+int ID = IntLiteral ; <Statement> ->
+int ID = IntLiteral ; <Assignment> ->
+int ID = IntLiteral ; ID = <Expression> ; ->
+int ID = IntLiteral ; ID = <Expression> + <Term> ; ->
+int ID = IntLiteral ; ID = <Term> + <Term> ; ->
+int ID = IntLiteral ; ID = <Term> * <Factor> + <Term> ; ->
+int ID = IntLiteral ; ID = <Factor> * <Factor> + <Term> ; ->
+int ID = IntLiteral ; ID = ID * <Factor> + <Term> ; ->
+int ID = IntLiteral ; ID = ID * IntLiteral + <Term> ; ->
+int ID = IntLiteral ; ID = ID * IntLiteral + <Factor> ; ->
+int ID = IntLiteral ; ID = ID * IntLiteral + IntLiteral ;
 ```
 
 **Cинтаксическое дерево:**
@@ -172,7 +166,7 @@ int a = 10 ; b = a * 2 + 5 ;
     │           └── ;
     └── <Statement>
         └── <Assignment>
-            ├── ID ("b")
+            ├── ID
             ├── =
             ├── <Expression>
             │   ├── <Expression>
